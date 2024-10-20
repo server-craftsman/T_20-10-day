@@ -92,76 +92,84 @@
             }
         }
 
+        /* Responsive styles */
         @media (max-width: 480px) {
-            .container svg {
-                width: 90%;
-                height: 90%;
-            }
-
-            .envelope {
-                width: 200px;
-                height: 120px;
-            }
-
-            .card {
-                width: 180px;
-                height: 100px;
-                top: 5px;
-                left: 10px;
-            }
-
-            .text {
-                font-size: 20px;
-                top: 10px;
-                left: 60px;
-            }
-
-            .heart {
-                width: 20px;
-                height: 20px;
-                top: 70px;
-                left: 70px;
-            }
-
-            .heart:before,
-            .heart:after {
-                width: 20px;
-                height: 20px;
-            }
-
             .formLetter {
-                width: 95%;
+                width: 100%;
                 height: auto;
                 padding: 10px;
-            }
-
-            .giftbox .img {
-                width: 120px;
-                left: 20px;
-            }
-
-            .textLetter h2 {
-                font-size: 20px;
-            }
-
-            .textLetter .contentLetter {
-                font-size: 14px;
-                padding: 0px 15px;
-            }
-
-            .boxLetter {
-                width: 90%;
-                height: auto;
-                padding: 10px;
+                margin: 0;
+                box-sizing: border-box;
+                position: relative;
             }
 
             .heartAnimation {
-                width: 80px;
-                margin: 0 auto;
+                width: 50px;
+                max-width: 100%;
+                height: 50px;
+                max-height: 100%;
+                margin: 0 auto 10px;
+                position: relative;
+                top: -20px;
+                /* right: 45%; */
+                left: 50%;
+                transform: translateX(-50%);
             }
 
-            .mewmew1, .mewmew2 {
-                width: 50px;
+            .textLetter .contentLetter {
+                font-size: 10px;
+                padding: 0px 12px;
+                line-height: 0.9;
+                text-align: center;
+                overflow-wrap: break-word;
+                height: auto;
+                max-height: 800px;
+            }
+
+            .giftbox .img {
+                width: 40px;
+                max-width: 100%;
+                height: 150px;
+                margin-top: 10px;
+                border-radius: 50px;
+            }
+
+            .giftbox img {
+                width: 100%;
+                height: 100%;
+                margin-right: 80px;
+                border-radius: 20px;
+            }
+
+            .textLetter {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-top: 20px;
+            }
+
+            .textLetter h2 {
+                font-size: 14px;
+                margin-left: 40px;
+                margin-bottom: 10px;
+                display: inline-block;
+                white-space: pre-line;
+            }
+
+            .textLetter h2:empty::after {
+                content: '\A';
+                white-space: pre;
+            }
+
+            .textLetter h2:not(:empty) {
+                white-space: normal;
+            }
+
+            .mewmew1,
+            .mewmew2 {
+                width: 40px;
+                bottom: 10px;
             }
         }
     </style>
@@ -731,13 +739,16 @@
 }
 .giftbox .img{
     position: absolute;
-    width: 180px;
-    bottom: -10px;
+    border-radius: 50px;
+    width: 130px;
+    /* bottom: -100px; */
     left: 50px;
     z-index: 100;
 }
 .giftbox img{
-    width: 100%;
+    width: 80%;
+    margin-top: 60px;
+    border-radius: 10px;
 }
 .textLetter {
             width: 100%;
