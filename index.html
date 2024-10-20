@@ -16,6 +16,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <style>
+        /* General styles */
         .container {
             display: flex;
             justify-content: center;
@@ -26,6 +27,142 @@
         .container svg {
             width: 50%;
             height: 50%;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .container svg {
+                width: 70%;
+                height: 70%;
+            }
+
+            .envelope {
+                width: 250px;
+                height: 150px;
+            }
+
+            .card {
+                width: 220px;
+                height: 120px;
+                top: 5px;
+                left: 15px;
+            }
+
+            .text {
+                font-size: 24px;
+                top: 15px;
+                left: 70px;
+            }
+
+            .heart {
+                width: 25px;
+                height: 25px;
+                top: 90px;
+                left: 90px;
+            }
+
+            .heart:before,
+            .heart:after {
+                width: 25px;
+                height: 25px;
+            }
+
+            .wrapperLetterForm {
+                padding: 10px;
+            }
+
+            .formLetter {
+                width: 90%;
+                height: auto;
+                padding: 15px;
+            }
+
+            .giftbox .img {
+                width: 150px;
+                left: 30px;
+            }
+
+            .textLetter h2 {
+                font-size: 24px;
+            }
+
+            .textLetter .contentLetter {
+                font-size: 16px;
+                padding: 0px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container svg {
+                width: 90%;
+                height: 90%;
+            }
+
+            .envelope {
+                width: 200px;
+                height: 120px;
+            }
+
+            .card {
+                width: 180px;
+                height: 100px;
+                top: 5px;
+                left: 10px;
+            }
+
+            .text {
+                font-size: 20px;
+                top: 10px;
+                left: 60px;
+            }
+
+            .heart {
+                width: 20px;
+                height: 20px;
+                top: 70px;
+                left: 70px;
+            }
+
+            .heart:before,
+            .heart:after {
+                width: 20px;
+                height: 20px;
+            }
+
+            .formLetter {
+                width: 95%;
+                height: auto;
+                padding: 10px;
+            }
+
+            .giftbox .img {
+                width: 120px;
+                left: 20px;
+            }
+
+            .textLetter h2 {
+                font-size: 20px;
+            }
+
+            .textLetter .contentLetter {
+                font-size: 14px;
+                padding: 0px 15px;
+            }
+
+            .boxLetter {
+                width: 90%;
+                height: auto;
+                padding: 10px;
+            }
+
+            .heartAnimation {
+                width: 80px;
+                margin: 0 auto;
+            }
+
+            .mewmew1, .mewmew2 {
+                width: 50px;
+            }
         }
     </style>
 
@@ -1103,7 +1240,7 @@
         // .textLetter text h2
         let indexText = 0;
         let textLetter = document.querySelector('.textLetter h2');
-        const textLetterH2 = "Gửi cậu!";
+        const textLetterH2 = "Gửi người anh thương!";
         let timoutTextLetter;
 
         function textCharLetter() {
@@ -1131,7 +1268,7 @@
         // chữ của thư bạn muốn gửi
         let indexTextContent = 0;
         let textLetterContent = document.querySelector('.contentLetter');
-        const textLetterP = "Chúc em 20/10 vui vẻ và tràn đầy hạnh phúc. Cảm ơn em vì những khoảnh khắc đẹp đã từng có với nhau. Mong rằng em luôn gặp nhiều niềm vui và thành công trong cuộc sống. Dù chúng ta không còn đi chung đường, anh vẫn mong mọi điều tốt đẹp nhất sẽ đến với em💗.";
+        const textLetterP = "Thắm à. Chúc em 20/10 vui vẻ và tràn đầy hạnh phúc. Cảm ơn em vì những khoảnh khắc đẹp đã từng có với nhau. Mong rằng em luôn gặp nhiều niềm vui và thành công trong cuộc sống. Dù chúng ta không còn đi chung đường, anh vẫn mong mọi điều tốt đẹp nhất sẽ đến với em💗.";
         let timoutTextLetterContent;
         function textCharLetterContent() {
             if (indexTextContent < textLetterP.length) {
